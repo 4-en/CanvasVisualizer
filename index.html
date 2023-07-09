@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #334;
+            overflow: hidden;
+            min-width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .exportButton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100px;
+            height: 50px;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .exportButton:hover {
+            background: #eee;
+        }
+
+        #canvas {
+            box-shadow: 0 0 10px #000;
+        }
+
+        .underlay {
+            margin-top: -2048px;
+            width: 2048px;
+            height: 2048px;
+            z-index: -1;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .underlay p {
+            font-size: 1800px;
+            font-family: sans-serif;
+            color: #334;
+            text-shadow: 0 0 10px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="2024" height="2024"></canvas>
+    <div class="underlay">
+        <p>
+            
+        </p>
+    </div>
+    <script src="/perlin.js"></script>
+    <script src="/visualizer.js"></script>
+    <button class="exportButton" onclick="exportCanvas()">Export</button>
+</body>
+</html>
