@@ -94,7 +94,7 @@ class NNVisualizer extends Visualizer {
         super();
 
         const NODE_COUNT = 40;
-        const GRID_SIZE = 200;
+        const GRID_SIZE = 30;
         this.nodes = [];
         /*
         for (let i = 0; i < NODE_COUNT; i++) {
@@ -102,7 +102,7 @@ class NNVisualizer extends Visualizer {
         }
         */
         noise.seed(Math.random());
-        const PERLIN_SCALE = 0.10;
+        const PERLIN_SCALE = 0.50;
 
         for(let i = 1; i < GRID_SIZE-1; i++) {
             for(let j = 1; j < GRID_SIZE-1; j++) {
